@@ -66,15 +66,13 @@ public class PlayerController : MonoBehaviour
         deathTextGO.SetActive (true);
         this.GetComponent<MeshRenderer>().enabled = false;
         yield return new WaitForSeconds(3);
-        Debug.Log("Has perdido");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     IEnumerator EndGame()
     {
         yield return new WaitForSeconds(3);
-        Debug.Log("Cerrar juego");
-        Application.Quit();
+        Time.timeScale = 0;
     }
 }
 

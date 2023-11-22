@@ -27,6 +27,7 @@ public class PointsCounter : MonoBehaviour
         if (points == 60)
         {
             winTextGO.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
